@@ -30,13 +30,13 @@
         <div id="wrap">
             <div id="text">
                 <div id="code">
-                    <span class="say"> Oh My Lady!! Your Highness 🤍🫴</span><br>
+                    <span class="say"> Oh My Gorgeous and Majestic Mommy 🤍🫴</span><br>
                     <span class="say">Wishing You The Happiest Birthday Of Your Life✨</span><br>
                     <span class="say">May Joy And Laughter Never Leave You 🩵</span><br>
-                    <span class="say">And give u many many happiness 💕</span><br>
-                    <span class="say">You Deserve the best, and I'm trying to give you such.❤️</span><br>
-                    <span class="say">And thanks for letting by your side.🥺 ❤️</span><br>
-                    <span class="say">Hope u have a great day today ❤️😘</span><br>
+                    <span class="say">And allah give u many many happiness 💕</span><br>
+                    <span class="say">You Deserve the best, You Deserve everything  🤍✨</span><br>
+                    <span class="say">wish i could give you such 🥀✌️</span><br>
+                    <span class="say">Hope u have a great day today 🤍✨</span><br>
                 </div>
             </div>
             <div id="clock-box">
@@ -179,5 +179,36 @@
         runAsync().start();
     })();
     </script>
+	<script>
+(function () {
+    const clock = document.getElementById("clock");
+    if (!clock) return;
+
+    // Replace this with the intended starting date and time.
+    const startDate = new Date("2025-03-01T00:00:00");
+
+    function updateClock() {
+        let seconds = Math.floor((Date.now() - startDate.getTime()) / 1000);
+
+        if (seconds < 0) {
+            clock.textContent = "The countdown hasn't started yet ❤️";
+            return;
+        }
+
+        const days = Math.floor(seconds / 86400);
+        seconds %= 86400;
+        const hours = Math.floor(seconds / 3600);
+        seconds %= 3600;
+        const minutes = Math.floor(seconds / 60);
+        seconds %= 60;
+
+        clock.textContent =
+            `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+})();
+	</script>
 </body>
 </html>
